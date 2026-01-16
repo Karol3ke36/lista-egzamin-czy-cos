@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Jakies zad z egz</string>
+    <string-array name="todos">
+        <item>Nauczyć sie</item>
+        <item>Pojsc na spacer</item>
+        <item>Pojsc na randke</item>
+    </string-array>
+</resources>
