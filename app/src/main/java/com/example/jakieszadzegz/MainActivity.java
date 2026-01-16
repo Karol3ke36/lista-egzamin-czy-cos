@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         listView = findViewById(R.id.listView);
+        editTextRzeczDoZrobienia = findViewById(R.id.editTextText);
+        buttonDodaj = findViewById(R.id.button);
+
         rzeczyDoZrobieniaArrayList = new ArrayList<>();
         rzeczyDoZrobieniaArrayList.add("Spotakć sie z dziewczyną");
         rzeczyDoZrobieniaArrayList.add("Spedzic dzien z laska");
