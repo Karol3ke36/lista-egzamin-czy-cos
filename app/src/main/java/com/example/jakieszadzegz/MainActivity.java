@@ -1,7 +1,10 @@
 package com.example.jakieszadzegz;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> rzeczyDoZrobieniaArrayList;
     private ArrayAdapter<String> arrayAdapter;
     private ListView listView;
+    private Button buttonDodaj;
+    private EditText editTextRzeczDoZrobienia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,5 +38,15 @@ public class MainActivity extends AppCompatActivity {
         rzeczyDoZrobieniaArrayList.add("Słuchac muzyki");
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, rzeczyDoZrobieniaArrayList);
         listView.setAdapter(arrayAdapter);
+        buttonDodaj.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String rzecz = editTextRzeczDoZrobienia.getText().toString();
+                        rzeczyDoZrobieniaArrayList.add(rzecz);
+                        arrayAdapter.notifyDataSetChanged();
+                    }
+                }
+        );
     }
 }
