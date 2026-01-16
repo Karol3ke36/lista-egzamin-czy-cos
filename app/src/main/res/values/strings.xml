@@ -5,4 +5,9 @@
         <item>Pojsc na spacer</item>
         <item>Pojsc na randke</item>
     </string-array>
+
+    <string-array name="priorytety">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>
