@@ -20,13 +20,14 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="text"
-            android:text="Dodaj element" />
+            android:hint="Dodaj element" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#dc143c"
             android:text="Dodaj" />
 
     </LinearLayout>
@@ -35,6 +36,8 @@
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:entries="@array/todos"/>
+        android:entries="@array/todos"
+        android:dividerHeight="2dp"
+        android:divider="#dc143c"/>
 
 </LinearLayout>
