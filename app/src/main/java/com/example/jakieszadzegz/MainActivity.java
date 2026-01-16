@@ -1,6 +1,8 @@
 package com.example.jakieszadzegz;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,8 +10,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class MainActivity extends AppCompatActivity {
+    private ArrayList<String> rzeczyDoZrobieniaArrayList;
+    private ArrayAdapter<String> arrayAdapter;
+    private ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +26,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        listView = findViewById(R.id.listView);
+        rzeczyDoZrobieniaArrayList = new ArrayList<>();
+        rzeczyDoZrobieniaArrayList.add("Spotakć sie z dziewczyną");
+        rzeczyDoZrobieniaArrayList.add("Spedzic dzien z laska");
+        rzeczyDoZrobieniaArrayList.add("Słuchac muzyki");
+        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, rzeczyDoZrobieniaArrayList);
+        listView.setAdapter(arrayAdapter);
     }
 }
